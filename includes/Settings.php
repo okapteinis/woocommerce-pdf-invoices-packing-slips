@@ -7,7 +7,6 @@ use WPO\IPS\Settings\SettingsGeneral;
 use WPO\IPS\Settings\SettingsDocuments;
 use WPO\IPS\Settings\SettingsDebug;
 use WPO\IPS\Settings\SettingsEDI;
-use WPO\IPS\Settings\SettingsUpgrade;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
@@ -23,7 +22,6 @@ class Settings {
 	public SettingsGeneral $general;
 	public SettingsDocuments $documents;
 	public SettingsDebug $debug;
-	public SettingsUpgrade $upgrade;
 	public SettingsEDI $edi;
 	public array $general_settings;
 	public array $debug_settings;
@@ -48,7 +46,6 @@ class Settings {
 		$this->documents        = SettingsDocuments::instance();
 		$this->debug            = SettingsDebug::instance();
 		$this->edi              = SettingsEDI::instance();
-		$this->upgrade          = SettingsUpgrade::instance();
 
 		$this->general_settings = get_option( 'wpo_wcpdf_settings_general', array() );
 		$this->debug_settings   = get_option( 'wpo_wcpdf_settings_debug', array() );
@@ -192,14 +189,9 @@ class Settings {
 			),
 		) );
 
-		// add status and upgrade tabs last in row
+		// add status tab last in row
 		$settings_tabs['debug'] = array(
 			'title'          => __( 'Advanced', 'woocommerce-pdf-invoices-packing-slips' ),
-			'preview_states' => 1,
-		);
-
-		$settings_tabs['upgrade'] = array(
-			'title'          => __( 'Upgrade', 'woocommerce-pdf-invoices-packing-slips' ),
 			'preview_states' => 1,
 		);
 

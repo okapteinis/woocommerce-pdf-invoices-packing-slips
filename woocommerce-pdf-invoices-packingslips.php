@@ -2,7 +2,7 @@
 /**
  * Plugin Name:          PDF Invoices & Packing Slips for WooCommerce
  * Requires Plugins:     woocommerce
- * Plugin URI:           https://wpovernight.com/downloads/woocommerce-pdf-invoices-packing-slips-bundle/
+ * Plugin URI:           https://github.com/okapteinis/woocommerce-pdf-invoices-packing-slips
  * Description:          Create, print & email PDF or Electronic Invoices & PDF Packing Slips for WooCommerce orders.
  * Version:              5.0.0-beta.5
  * Author:               WP Overnight
